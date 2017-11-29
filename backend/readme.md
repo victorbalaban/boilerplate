@@ -1,6 +1,9 @@
 # Express and sequelizejs 
 
-
+## install deps
+```sh
+npm install
+```
 ## run the backend
 ```sh
     nodemon ./bin/www

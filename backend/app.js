@@ -5,14 +5,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var helmet = require('helmet')
-var cors = require('cors')
+var helmet = require('helmet');
+var cors = require('cors');
 
 // Init
 var app = express();
 
-app.use(helmet())
-app.use(cors())
+app.use(helmet());
+app.use(cors());
 
 // Config
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -46,7 +46,7 @@ app.use(function(err, req, res, next) {
 
 app.use(function (err, req, res, next) {
   console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
+  res.status(500).send('Something broke!');
+});
 
 module.exports = app;
