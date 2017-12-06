@@ -30,7 +30,6 @@ import { BaseRequestOptions } from '@angular/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    BrowserModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
