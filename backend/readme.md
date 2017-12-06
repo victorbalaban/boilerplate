@@ -17,7 +17,7 @@ this will create the tables in your database.
 
 for generatic models 
 ```sh 
-sequelize model:create --name Todo --attributes title:string
+sequelize model:create --name todo --attributes title:string,firstName:string,lastName:string,email:string
 ``` 
 more on the tutorial url
 ### Docs
