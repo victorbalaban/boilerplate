@@ -20,6 +20,9 @@ for generatic models
 sequelize model:create --name user --attributes firstName:string,lastName:string,email:string
 
 ``` 
+
+https://github.com/sequelize/cli
+
 more on the tutorial url
 ### Docs
 https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize

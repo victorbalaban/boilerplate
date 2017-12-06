@@ -15,6 +15,7 @@ docker run --name postgresdb -p 32768:5432 -d postgres
 docker exec -it postgresdb psql --username postgres -c \ "CREATE DATABASE devdb OWNER postgres;"
 docker exec -it postgresdb psql --username postgres -c \ "GRANT ALL PRIVILEGES ON DATABASE devdb TO postgres;"
 ```
+* free database hosting: [elephantsql](https://www.elephantsql.com/)
 
 ### After install we need some npm utils so open the cli and type the following
 ```sh
@@ -45,3 +46,4 @@ npm install -g sequelize-cli
     * [ng2-semantic-ui](https://edcarroll.github.io/ng2-semantic-ui/#/getting-started)
 * [dbdesigner](https://dbdesigner.net/)
 * [Postman](https://www.getpostman.com/)
+* [heidisql](https://www.heidisql.com/)
