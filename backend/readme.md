@@ -19,6 +19,9 @@ for generatic models
 ```sh 
 sequelize model:create --name Todo --attributes title:string
 ``` 
+
+https://github.com/sequelize/cli
+
 more on the tutorial url
 ### Docs
 https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize
