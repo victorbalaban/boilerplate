@@ -1,22 +1,30 @@
 "use strict";
 
-const user = require('../models').user;
+const userRepo = require('../models').user;
 
-exports.list = function (req, res) {
-  user.findAll().then(user => {
-    res.jsonp(user);
-  }).catch((error) => res.status(400).send(error));
+exports.findAll = (req, res) => {
+  userRepo.findAll().then(dbresponse => {
+    res.status(200).jsonp(dbresponse);
+  }).catch((error) => res.status(400).jsonp(error));
 };
 
-exports.create = function (req, res) {
-  res.jsonp(user.create(req.body));
+exports.create = (req, res) => {
+  userRepo.create(req.body)
+    .catch((error) => res.status(400).jsonp(error));
+  res.jsonp({ data: "user created" });
 };
 
-exports.findById = function (req, res) {
+exports.update = (req, res) => {
+  userRepo.update(req.body, { where: { id: req.body.id }, returning: true })
+  .catch((error) => res.status(400).jsonp(error));
+  res.status(200).jsonp({ data: "user updated" });
+};
+
+exports.findById = (req, res) => {
   let id = req.params.id;
-  user.findById(id).then(user => {
+  userRepo.findById(id).then(user => {
     if (!user) {
-      return res.status(400).send({
+      return res.status(400).jsonp({
         message: 'User Not Found',
       });
     }
@@ -24,9 +32,9 @@ exports.findById = function (req, res) {
   });
 };
 
-exports.delete = function (req, res) {
+exports.delete = (req, res) => {
   let id = req.params.id;
-  user.findById(req.params.id)
+  userRepo.findById(req.params.id)
     .then(user => {
       if (!user) {
         return res.status(400).send({
@@ -35,8 +43,8 @@ exports.delete = function (req, res) {
       }
       return user
         .destroy()
-        .then(() => res.status(204).send())
-        .catch(error => res.status(400).send(error));
+        .then(() => res.status(204).jsonp())
+        .catch(error => res.status(400).jsonp(error));
     })
-    .catch(error => res.status(400).send(error));
+    .catch(error => res.status(400).jsonp(error));
 };
