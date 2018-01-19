@@ -20,8 +20,8 @@ describe('Status and content', function () {
         });
     });
 
-    describe('About page', function () {
-        it('status', function (done) {
+    describe('test err', function () {
+        it('status 404', function (done) {
             request('http://localhost:3000/about/', function (error, response, body) {
                 expect(response.statusCode).to.equal(404);
                 done();
