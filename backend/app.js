@@ -9,7 +9,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 const debug = require('debug')('app');
 const winston = require('winston');
-const  name = 'app';
+const name = 'app';
+
 // Init
 const app = express();
 debug('booting %o');
@@ -31,10 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Controllers
-const index = require('./src/rest/index');
-const user = require('./src/rest/user');
-app.use('/api', index);
-app.use('/api/user', user);
+const main = require('./src/rest/main');
+app.use('/api', main);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
