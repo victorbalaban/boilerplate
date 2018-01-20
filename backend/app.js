@@ -31,9 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Controllers
-const index = require('./src/rest/index');
+const main = require('./src/rest/main');
 const user = require('./src/rest/user');
-app.use('/api', index);
+app.use('/api', main);
 app.use('/api/user', user);
 
 // catch 404 and forward to error handler
