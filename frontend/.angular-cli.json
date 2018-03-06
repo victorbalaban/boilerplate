@@ -19,19 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/font-awesome/css/font-awesome.css",
-        "../src/assets/semantic/semantic.css",
-        "../node_modules/primeng/resources/primeng.css",
-        "../node_modules/primeng/resources/themes/flick/theme.css",
         "styles.css"
       ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/popper.js/dist/umd/popper.js",
-        "../node_modules/chart.js/dist/Chart.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -64,29 +54,7 @@
     }
   },
   "defaults": {
-    "styleExt": "less",
-    "component": {
-      "spec": false,
-      "inlineStyle": false,
-      "inlineTemplate": false
-    },
-    "directive": {
-      "spec": false
-    },
-    "class": {
-      "spec": false
-    },
-    "guard": {
-      "spec": false
-    },
-    "module": {
-      "spec": false
-    },
-    "pipe": {
-      "spec": false
-    },
-    "service": {
-      "spec": false
-    }
+    "styleExt": "css",
+    "component": {}
   }
 }
