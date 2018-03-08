@@ -26,6 +26,7 @@ Funny article: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d
     * Ui components:
       * [primeng](https://www.primefaces.org/primeng/#/)
       * [bootstrap](https://getbootstrap.com/)
+      * [clarity](https://vmware.github.io/clarity/)
     * UnitTesting
       * [Krama](https://karma-runner.github.io/2.0/index.html)
       * [Jasmine](https://jasmine.github.io/)
@@ -42,7 +43,7 @@ Funny article: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d
    * [docker](https://www.docker.com/)
    * [Postman](https://www.getpostman.com/)
    * database
-       *[free mongo hosting]:(https://mlab.com/)
+       * [free mongo hosting](https://mlab.com/)
        * [roboMongo](https://robomongo.org/)
    * [Heroku](https://www.heroku.com/home)
    * [SourceTree](https://www.sourcetreeapp.com/)
