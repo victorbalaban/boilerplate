@@ -1,49 +1,50 @@
-# labtemplate
+## Docs
+## Useful urls
 
-# Setup
-
-## Tools
-
-* [Nodejs LTS ](https://nodejs.org/en/)
-* [git](https://git-scm.com/downloads)
-* [SourceTree](https://www.sourcetreeapp.com/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [postgres](https://www.postgresql.org/) or download [docker for windows](https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows), and start a postgres container and setup the devdb
-
-```sh
-docker run --name postgresdb -p 32768:5432 -d postgres
-docker exec -it postgresdb psql --username postgres -c \ "CREATE DATABASE devdb OWNER postgres;"
-docker exec -it postgresdb psql --username postgres -c \ "GRANT ALL PRIVILEGES ON DATABASE devdb TO postgres;"
-```
-* free database hosting: [elephantsql](https://www.elephantsql.com/)
-
-### After install we need some npm utils so open the cli and type the following
-```sh
-npm install -g @angular/cli
-npm install -g nodemon
-npm install -g sequelize-cli
-```
-
-## Books
-* Pro git
-* Pro Angular, 2nd Edition
-* Express.js Deep API Reference
-* Express.js Guide
-* Pro Express.js
-* more on [allitebooks](http://www.allitebooks.com/)
+TypeScript Deep Dive:   https://basarat.gitbooks.io/typescript/content/
+Mongodb connection: https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
+Unit testing for backend: https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai
+Clean code javascript: https://github.com/ryanmcdermott/clean-code-javascript
+Funny article: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f
 
 ## List of tech stack
 
-* [Angular ](https://angular.io/)
-* [angular-cli](https://github.com/angular/angular-cli)
-* [Express js](https://expressjs.com/)
-* [squel](https://hiddentao.com/squel/)
-* [Sequelize](http://docs.sequelizejs.com/)
-* Ui components: 
-    * [primeng](https://www.primefaces.org/primeng/#/)
-    * [bootstrap](https://getbootstrap.com/)
-    * [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
-    * [ng2-semantic-ui](https://edcarroll.github.io/ng2-semantic-ui/#/getting-started)
-* [dbdesigner](https://dbdesigner.net/)
-* [Postman](https://www.getpostman.com/)
-* [heidisql](https://www.heidisql.com/)
+* Backend
+  * [JavaScript](https://www.javascript.com/)
+  * [nodejs](https://nodejs.org/)
+  * [ExpressJs](https://expressjs.com/)
+  * [MongoDb](https://www.mongodb.com/)
+  * [MongooseJs](http://mongoosejs.com/)
+  * UnitTesting
+    * [mocha](https://mochajs.org/)
+    * [chai](http://chaijs.com/)
+
+* Frontend
+    * HTML, CSS
+    * [TypeScript](https://www.typescriptlang.org/)
+    * [Angular](https://angular.io/)
+    * Ui components:
+      * [primeng](https://www.primefaces.org/primeng/#/)
+      * [bootstrap](https://getbootstrap.com/)
+      * [clarity](https://vmware.github.io/clarity/)
+    * UnitTesting
+      * [Krama](https://karma-runner.github.io/2.0/index.html)
+      * [Jasmine](https://jasmine.github.io/)
+
+* Tools
+   * [Nodejs LTS](https://nodejs.org/en/)
+     ```sh
+     npm install -g @angular/cli
+     npm install -g nodemon
+     ```
+     * [angular-cli](https://github.com/angular/angular-cli)
+     * [nodemon](https://nodemon.io/)
+   * [Git](https://git-scm.com/)
+   * [docker](https://www.docker.com/)
+   * [Postman](https://www.getpostman.com/)
+   * database
+       * [free mongo hosting](https://mlab.com/)
+       * [roboMongo](https://robomongo.org/)
+   * [Heroku](https://www.heroku.com/home)
+   * [SourceTree](https://www.sourcetreeapp.com/)
+   * [Visual Studio Code](https://code.visualstudio.com/)

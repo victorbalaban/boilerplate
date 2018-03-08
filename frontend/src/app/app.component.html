@@ -1,14 +1,24 @@
-<div class="ui top fixed menu inverted large">
-  <a class="item" (click)="sidebar.toggle()">
-    <i class="sidebar icon"></i> Menu
-  </a>
+<div class="main-container">
+  <header class="header header-6">
+    <div class="branding">
+      ...
+    </div>
+    <div class="header-nav">
+      <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+      <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+    </div>
+    <div class="header-actions">
+      <a href="javascript://" class="nav-link nav-icon">
+        <clr-icon shape="cog"></clr-icon>
+      </a>
+    </div>
+  </header>
+  <div class="content-container">
+    <div class="content-area">
+      ...
+    </div>
+    <nav class="sidenav">
+      ...
+    </nav>
+  </div>
 </div>
-<sui-sidebar-container class="ui bottom attached segment">
-  <sui-sidebar class="inverted vertical" #sidebar>
-    <a class="item">Home</a>
-    <a class="item">User</a>
-  </sui-sidebar>
-  <sui-sidebar-sibling [isDimmedWhenVisible]="true">
-    <router-outlet></router-outlet>
-  </sui-sidebar-sibling>
-</sui-sidebar-container>
