@@ -53,3 +53,12 @@ Funny article: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d
    * [Heroku](https://www.heroku.com/home)
    * [SourceTree](https://www.sourcetreeapp.com/)
    * [Visual Studio Code](https://code.visualstudio.com/)
+
+
+```sh
+git clone https://github.com/lupu60/boilerplate.git
+cd boilerplate
+git remote remove origin
+git remote add origin https://github.com/<username>/<reponame>.git
+git push -u origin master
+```
