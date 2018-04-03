@@ -5,11 +5,14 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { NoteComponent } from './note/note.component';
+
 @NgModule({
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    
   ],
-  declarations: [HomeComponent, NavbarComponent]
+  declarations: [HomeComponent, NavbarComponent,NoteComponent]
 })
 export class PagesModule { }

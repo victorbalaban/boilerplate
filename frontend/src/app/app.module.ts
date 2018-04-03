@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     CommonModule,
     PagesModule,
     BrowserModule,
-    ClarityModule
+    ClarityModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
