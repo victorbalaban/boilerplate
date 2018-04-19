@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { NoteComponent } from './note/note.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { NoteComponent } from './note/note.component';
     PagesRoutingModule,
     
   ],
-  declarations: [HomeComponent, NavbarComponent,NoteComponent]
+  declarations: [HomeComponent, NavbarComponent,NoteComponent, CatalogComponent]
 })
 export class PagesModule { }
