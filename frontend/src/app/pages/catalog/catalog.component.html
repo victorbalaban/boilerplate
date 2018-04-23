@@ -36,23 +36,17 @@
 
     <h1>Student:</h1>
     <h1>Data:</h1>
-<table id="t01">
+<table id="t01" *ngIf="profs">
     <tr>
-      <th>Materie</th>
-      <th>Nota</th> 
-    </tr>
-    <tr>
-      <td>Java</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>Baze de date</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>Securitate</td>
-      <td>10</td>
-    </tr>
+        <th>Mateire</th>
+        <th>Nota</th>
+   </tr>
+
+   <!-- BIND ARRAY TO TABLE -->
+   <tr *ngFor="let prof of profs">
+       <td>{{prof.country}}</td>
+       <td>{{prof.id}}</td>
+   </tr>
   </table>
  <br>
   <button onclick="myFunction()" style="">Log Out</button>

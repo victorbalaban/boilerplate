@@ -24,29 +24,17 @@
 
     <h1>Profesor:</h1>
     <h1>Materie:</h1>>
-<table id="t01">
+<table id="t01" *ngIf="students">
     <tr>
-      <th>Nume</th>
-      <th>Prenume</th>
-      <th>Nota</th>  
-      <th>Data Examen</th> 
-    </tr>
-    <tr>
-      <td>  Maria  </td>
-      <td>Dates</td>
-      <td> <div contenteditable>10</div></td>
-      <td> <div contenteditable>20/11/2018 </div></td>
-    </tr>
-    <tr>
-      <td>Victor</td>
-      <td>Balaban</td>
-      <td>10</td>
-      <td>20/11/2018</td>
-    </tr>
-    <tr>
-      <td>Ana Maria</td>
-      <td>Bucelea</td>
-      <td>10</td>
-      <td>20/11/2018</td>
-    </tr>
+        <th>Nume</th>
+        <th>Prenume</th>
+        <th>Nota</th>
+   </tr>
+
+   <!-- BIND ARRAY TO TABLE -->
+   <tr *ngFor="let student of students">
+       <td>{{student.fname}}</td>
+       <td>{{student.lname}}</td>
+       <td>{{student.id}}</td>
+   </tr>
   </table>
