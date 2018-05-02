@@ -1,0 +1,27 @@
+{
+  "profesors": [
+    {
+      "id": 1,
+      "username": "Sebastian",
+      "password": "pass"
+    },
+    {
+      "id": 2,
+      "username": "Steve",
+      "password": "pass"
+    }
+  ],
+
+    "students": [
+    {
+      "id": 1,
+      "username": "Crisi",
+      "password": "pass"
+    },
+    {
+      "id": 2,
+      "username": "Anastesia",
+      "password": "pass"
+    }
+  ]
+}

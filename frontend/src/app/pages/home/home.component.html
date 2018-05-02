@@ -3,7 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;   align-content: center;
+        align-items: center;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -24,6 +25,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+    
 }
 
 button:hover {
@@ -148,12 +150,14 @@ span.psw {
 }
 </style>
 </head>
-<body>
+<body text-align:center>
 
-<h2>Modal Login Form</h2>
+<h2 align="center ">Welcome to Virtual University </h2>
+<div align="center">
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login Profesor</button>
 <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login Student</button>
+</div>
 
 <div id="id01" class="modal">
   
@@ -170,7 +174,7 @@ span.psw {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit" onclick="logProf()">Login</button>
 
     </div>
 
@@ -216,6 +220,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
 </script>
 
 </body>
