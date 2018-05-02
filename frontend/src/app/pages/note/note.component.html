@@ -1,4 +1,16 @@
 <style>
+        button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: center;
+    top: 50%;
+} 
     table {
         width:100%;
     }
@@ -22,8 +34,6 @@
     }
     </style>
 
-    <h1>Profesor:</h1>
-    <h1>Materie:</h1>>
 <table id="t01" *ngIf="students">
     <tr>
         <th>Nume</th>
@@ -38,3 +48,6 @@
        <td>{{student.id}}</td>
    </tr>
   </table>
+  <br>
+
+  <button onclick="window.location.href='http://localhost:4200/#/pages/home'">Log Out</button>

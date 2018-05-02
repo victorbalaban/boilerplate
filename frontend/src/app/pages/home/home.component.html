@@ -190,16 +190,15 @@ span.psw {
       <img src="/assets/images/img_stud.png" alt="Avatar" class="avatar" style="width:auto;" height="100">
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+    <form name= "myForm"(ngClick) = "onClickSubmitStudent(user.value)" >
+        <input type = "text" name = "user" placeholder = "Username" ngModel>
+        <br/>
+        <input type = "password" name = "pass" placeholder = "Password" ngModel>
+        <br/>
+        <input type = "submit" value = "Login" 
+        onclick="window.location.href='http://localhost:4200/#/pages/catalog'" required>
         
-      <button type="submit">Login</button>
-
-    </div>
+     </form>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
