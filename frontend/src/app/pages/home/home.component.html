@@ -39,6 +39,12 @@ button:hover {
     background-color: #f44336;
 }
 
+.loginbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+}
+
 /* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
@@ -128,6 +134,14 @@ span.psw {
     animation: animatezoom 0.6s
 }
 
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}
@@ -165,19 +179,26 @@ span.psw {
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="/assets/images/img_avatar2.png" alt="Avatar" class="avatar" style="width:auto;" height="100">
+      <div style="margin-top:16px">{{info}}</div>
     </div>
 
-    <form (ngClick) = "onClickSubmit(user.value)" >
-        <input type = "text" name = "user" placeholder = "Username" ngModel>
-        <br/>
-        <input type = "password" name = "pass" placeholder = "Password" ngModel>
-        <br/>
-        <input type = "submit" value = "Login" 
-        onclick="window.location.href='http://localhost:4200/#/pages/note'">
-     </form>
+     <form (ngSubmit)="onLoginProfessor()"> 
+            <input type="text" name="userprof" required placeholder="Username" [(ngModel)]="username"  #userprof="ngModel">
+            <div [hidden]="userprof.valid || userprof.pristine"
+            class="alert alert-danger">
+         Username is required
+       </div>
+            <br/>
+            <input type="password" name="passprof" placeholder="Password" [(ngModel)]="password" required #passprof="ngModel">
+            <div [hidden]="passprof.valid || passprof.pristine"
+            class="alert alert-danger">
+         Password is required
+       </div>
+    </form>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button class="loginbtn" (click)="onLoginProfessor()">Login</button>
+      <button type="button" (click)="onCancelClick()" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
@@ -188,20 +209,26 @@ span.psw {
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="/assets/images/img_stud.png" alt="Avatar" class="avatar" style="width:auto;" height="100">
+      <div style="margin-top:16px">{{info}}</div>
     </div>
 
-    <form name= "myForm"(ngClick) = "onClickSubmitStudent(user.value)" >
-        <input type = "text" name = "user" placeholder = "Username" ngModel>
+     <form (ngSubmit)="onLoginStudent()"> 
+        <input type="text" name="user" required placeholder="Username" [(ngModel)]="username"  #user="ngModel">
+        <div [hidden]="user.valid || user.pristine"
+        class="alert alert-danger">
+     Username is required
+   </div>
         <br/>
-        <input type = "password" name = "pass" placeholder = "Password" ngModel>
-        <br/>
-        <input type = "submit" value = "Login" 
-        onclick="window.location.href='http://localhost:4200/#/pages/catalog'" required>
-        
-     </form>
+        <input type="password" name="pass" placeholder="Password" [(ngModel)]="password" required #pass="ngModel">
+        <div [hidden]="pass.valid || pass.pristine"
+        class="alert alert-danger">
+     Password is required
+   </div>
+</form>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <button class="loginbtn" (click)="onLoginStudent()">Login</button>
+      <button type="button" (click)="onCancelClick()" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>

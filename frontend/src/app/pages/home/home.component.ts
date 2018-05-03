@@ -12,17 +12,23 @@ import { Routes, RouterModule } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+username: string;
+password: string;
+info: string;
 
   profesors: Professor [];
   students: Student [];
   constructor(private http: HttpClient, private router: Router) {
     this.http.get('http://localhost:3000/profesors').subscribe(data=>{
+          console.log("proffessors : ");
           console.log(data);
           this.profesors = data as Professor [];
       },(err: HttpErrorResponse) => {
         console.log (err.message);
       })
       this.http.get('http://localhost:3000/students').subscribe(data=>{
+        console.log("students : ");
           console.log(data);
           this.students = data as Student [];
       },(err: HttpErrorResponse) => {
@@ -30,34 +36,55 @@ export class HomeComponent implements OnInit {
       })
 
    }
-   onClickSubmit(data) {
-    this.profesors.forEach(prof => {
-      if ((data.user.name === prof.name) && (data.user.password === prof.password)) {
-        this.router.navigateByUrl("/pages/note");      
-      }  
 
-    });
- }  
-
- onClickSubmitStudent(data) {
-  this.students.forEach(stud => {
-    if ((data.user.name === stud.name) && (data.user.password === stud.password)) {
-      this.router.navigateByUrl("/pages/catalog");      
+ onLoginProfessor(){
+   if(!(this.username && this.password)){
+    this.info="Please fill in username and password fields!";
+    return;
+   }
+  this.profesors.forEach(prof => {
+    if ((this.username === prof.username) && (this.password === prof.password)) {
+      this.info = "Login successfully";
+      this.router.navigateByUrl("/pages/note");
+      return;  
     }  
-
   });
-}
+  this.info="Invalid username or password!"
+ }
+
+ onLoginStudent(){
+  if(!(this.username && this.password)){
+    this.info="Please fill in username and password fields!";
+    return;
+   }
+  this.students.forEach(stud => {
+    if ((this.username === stud.username) && (this.password === stud.password)) {
+      this.info = "Login successfully";
+      this.router.navigateByUrl("/pages/catalog");
+      return;  
+    }  
+  });
+  this.info="Invalid username or password!"
+ }
+
+
+ onCancelClick(){
+   this.username = undefined;
+   this.password = undefined;
+   this.info = undefined;
+ }
 
   ngOnInit() {
   }
 
 }
+
 interface Professor{
-  name:String;
+  username:String;
   password:String;
 }
 
 interface Student{
-  name:String;
+  username:String;
   password:String;
 }

@@ -9,7 +9,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,13 +17,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     AppRoutingModule,
+    FormsModule,
     CommonModule,
     PagesModule,
     BrowserModule,
     ClarityModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

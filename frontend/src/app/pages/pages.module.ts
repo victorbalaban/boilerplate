@@ -7,12 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { NoteComponent } from './note/note.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PagesRoutingModule,
-    
+    FormsModule
   ],
   declarations: [HomeComponent, NavbarComponent,NoteComponent, CatalogComponent]
 })
